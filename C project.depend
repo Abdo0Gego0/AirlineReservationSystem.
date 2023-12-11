@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1702152791 source:g:\career\nti\c project\main.c
+	"system.h"
+
+1702173628 g:\career\nti\c project\system.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1702304884 source:g:\career\nti\c project\system.c
+	"system.h"
+
