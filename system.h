@@ -41,6 +41,6 @@ void initializeSeatsAvailability();
 void swap (Clients *,Clients*);
 int getIndexFromColumn(char column, char columns[]);
 void sortClientsByName(Clients **ph);
-void markSeatAsAvailable(Seats *seat,int value);
+void markSeatAsAvailable(Clients * current,int value);
 
 #endif // SYSTEM_H_INCLUDED

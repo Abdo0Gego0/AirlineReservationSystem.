@@ -10,3 +10,11 @@
 1702304884 source:g:\career\nti\c project\system.c
 	"system.h"
 
+1702152791 source:g:\career\nti\c_project\main.c
+	"system.h"
+
+1702348103 g:\career\nti\c_project\system.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -93,9 +93,9 @@ void newClient(Clients **ph) {
     /** Get client information from the user **/
 
     printf("Enter client name: ");
-    //scanf("%s", newClientNode->name);
-    fflush(stdin);
-    fgets(newClientNode->name, sizeof(newClientNode->name), stdin);
+    scanf("%s", newClientNode->name);
+    /*fflush(stdin);
+    fgets(newClientNode->name, sizeof(newClientNode->name), stdin);*/
 
 
 
@@ -315,24 +315,24 @@ void clientEdit(Clients ** ph, int clientId){
     current = *ph;
 }
 
-void markSeatAsAvailable(Seats *seat,int value) {
+void markSeatAsAvailable(Clients * current,int value) {
     int rowIndex;
     int columnIndex;
     // Mark the seat as available based on its class and position
-    switch (seat->Class) {
+    switch (current->seat.Class) {
         case FIRST_CLASS:
-            rowIndex = seat->row -1;
-            columnIndex = getIndexFromColumn(seat->column, arr1);
+            rowIndex = current->seat.row -1;
+            columnIndex = getIndexFromColumn(current->seat.column, arr1);
             firstClassAvailability[rowIndex][columnIndex] = value;
             break;
         case SECOND_CLASS:
-            rowIndex = seat->row -7;
-            columnIndex = getIndexFromColumn(seat->column, arr1);
+            rowIndex = current->seat.row -7;
+            columnIndex = getIndexFromColumn(current->seat.column, arr1);
             secondClassAvailability[rowIndex][columnIndex] = value;
             break;
         case THIRD_CLASS:
-            rowIndex = seat->row -22;
-            columnIndex = getIndexFromColumn(seat->column, arr2);
+            rowIndex = current->seat.row -22;
+            columnIndex = getIndexFromColumn(current->seat.column, arr2);
             thirdClassAvailability[rowIndex][columnIndex] = value;
             break;
         default:
